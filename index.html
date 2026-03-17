@@ -3,35 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artikel Posting - SD Inpres Lelingluan</title>
-    
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    
+    <title>ARTIKEL POSTING</title>
     <style>
-        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background-color: #f3f4f6; }
-        iframe { width: 100%; height: 100%; border: none; position: absolute; top: 0; left: 0; z-index: 10; }
-        .fade-out { opacity: 0; pointer-events: none; transition: opacity 0.8s ease-in-out; }
+        /* Mengatur agar halaman tidak memiliki margin default */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Mencegah scrollbar ganda */
+        }
+
+        /* Mengatur iframe agar memenuhi layar */
+        iframe {
+            display: block;
+            width: 100%;
+            height: 100vh; /* 100% dari tinggi viewport/layar */
+            border: none; /* Menghilangkan border iframe */
+        }
     </style>
 </head>
 <body>
 
-    <div id="loader" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-gray-100 transition-opacity duration-700">
-        <div class="w-12 h-12 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mb-4"></div>
-        <p class="text-gray-600 font-medium">Memuat Website...</p>
-    </div>
-
     <iframe 
-        id="appFrame"
-        src="https://script.google.com/macros/s/AKfycbyhhQboJ6qWwwj9Pe5K_xr86IX_2rUj5i-RIP63TdEXDfH5Zy0tiDW6mWYILR4AgpbQcw/exec"
-        onload="hideLoader()">
+        src="https://script.google.com/macros/s/AKfycbyhhQboJ6qWwwj9Pe5K_xr86IX_2rUj5i-RIP63TdEXDfH5Zy0tiDW6mWYILR4AgpbQcw/exec" 
+        title="ARTIKEL POSTING"
+        allowfullscreen>
     </iframe>
 
-    <script>
-        function hideLoader() {
-            const loader = document.getElementById('loader');
-            loader.classList.add('fade-out');
-            setTimeout(() => { loader.style.display = 'none'; }, 800);
-        }
-    </script>
 </body>
 </html>
