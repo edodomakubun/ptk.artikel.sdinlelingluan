@@ -1,0 +1,1 @@
+# ptk.artikel.sdinlelingluan
